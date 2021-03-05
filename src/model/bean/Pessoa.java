@@ -1,6 +1,7 @@
 package model.bean;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Pessoa {
 
@@ -16,6 +17,10 @@ public class Pessoa {
         this.cpf = cpf;
         String[] formador = nascimento.split("/");
         this.nasc = LocalDate.of((Integer.parseInt(formador[2])),Integer.parseInt(formador[1]),Integer.parseInt(formador[0]));
+    }
+
+    public int idade(){
+        return (int) LocalDate.now().until(nasc, ChronoUnit.YEARS)*-1;
     }
 
     public String getNome() {
