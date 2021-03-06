@@ -1,7 +1,6 @@
 package model.bean;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -67,7 +66,7 @@ public class Pessoa {
     }
 
     private String[] fabric() throws IOException {
-        String path = "C:\\Users\\mrosi\\IdeaProjects\\TesteGit\\src\\PessoaComSobrenome.csv";
+        String path = "src\\PessoaComSobrenome.csv";
         BufferedReader buffRead = new BufferedReader(new FileReader(path));
         Random gerador = new Random();
         String linha = "";
